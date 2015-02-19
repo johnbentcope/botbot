@@ -1,7 +1,13 @@
 goodbyes = [
   "Bye, {name}.",
   "Later, {name}.",
-  "Take care, {name}."
+  "Take care, {name}.",
+  "Peace out, {name}!",
+  "Take it easy, {name}.",
+  "Stay safe out there, {name}.",
+  "Catch you on the flipside, {name}!",
+  "I feel so lonely without you, {name}...",
+  "Hope you have a very Rifle day, {name}."
 ]
 
 goodbye = (name) ->
