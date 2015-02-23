@@ -1,5 +1,16 @@
 fs	= require 'fs'
-datum	= fs.readFile './usersfeb20.json', (err, data) -> fileText = data
+userList = 'usersfeb23.json'
+
+foo = ->
+	fs.readFileSync userList, 'utf8'
+#for uname in JSON.parse(foo()).members
+#  employees.push
+#    "firstName" : uname.profile.first_name
+#    "lastName"  : uname.profile.last_name
+
+
+  #msg.reply "#{uname.profile.first_name} #{uname.profile.last_name} - #{uname.id}"
+
 
 staff = [
 	'Alex Acevedo',

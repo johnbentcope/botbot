@@ -29,29 +29,17 @@ module.exports = (robot) ->
     msg.send msg.random leaveReplies
   robot.hear /I like pie/i, (msg) ->
     msg.emote "makes a freshly baked pie"
-  #
-  # lulz = ['lol', 'rofl', 'lmao']
-  #
-  # robot.respond /lulz/i, (msg) ->
-  #   msg.send msg.random lulz
-  #
-  # robot.topic (msg) ->
-  #   msg.send "#{msg.message.text}? That's a Paddlin'"
-  #
-  #
-  #
-  # answer = process.env.HUBOT_ANSWER_TO_THE_ULTIMATE_QUESTION_OF_LIFE_THE_UNIVERSE_AND_EVERYTHING
-  #
-  # robot.respond /what is the answer to the ultimate question of life/, (msg) ->
-  #   unless answer?
-  #     msg.send "Missing HUBOT_ANSWER_TO_THE_ULTIMATE_QUESTION_OF_LIFE_THE_UNIVERSE_AND_EVERYTHING in environment: please set and try again"
-  #     return
-  #   msg.send "#{answer}, but what is the question?"
-  #
-  # robot.respond /you are a little slow/, (msg) ->
-  #   setTimeout () ->
-  #     msg.send "Who you calling 'slow'?"
-  #   , 60 * 1000
+  
+  lulz = ['lol', 'rofl', 'lmao']
+  
+  robot.respond /lulz/i, (msg) ->
+    msg.send msg.random lulz
+  
+  robot.respond /you are a little slow/, (msg) ->
+    msg.send "test"    
+    setTimeout () ->
+    msg.send "Who you calling 'slow'?"
+      , 60 * 1000
   #
   # annoyIntervalId = null
   #
