@@ -17,11 +17,11 @@ module.exports = (robot) ->
 		  status = "null"
 		minder = msg.message.user.name
 		if status == "sick"
-		  msg.reply "So #{outName} called out sick? I don't believe them, but I'll add them to the list, #{minder}"
+		  msg.reply "So #{outName} called out sick? I don't believe them, but I'll add them to the list."
 		else if status == "vacationing"
-		  msg.reply "Oh well that's nice, #{outName} deserves a break#{status}. I'll add them to the list, #{minder}"
+		  msg.reply "Oh well that's nice, #{outName} deserves a break#{status}. I'll add them to the list."
 		else if status is "null"
-		  msg.reply "#{outName}? No excuse? No surprise. I'll add them to the list, #{minder}"
+		  msg.reply "#{outName}? No excuse? No surprise. I'll add them to the list."
 		else
-		  msg.reply "So #{outName} is out #{status}? That's nifty. I'll add them to the list, #{minder}"
+		  msg.reply "So #{outName} is out #{status}? That's nifty. I'll add them to the list."
 		#msg.reply fileText
