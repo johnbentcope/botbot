@@ -10,18 +10,25 @@
 
 module.exports = (robot) ->
 
-  # robot.hear /badger/i, (msg) ->
-  #   msg.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
-  #
-  # robot.respond /open the (.*) doors/i, (msg) ->
-  #   doorType = msg.match[1]
-  #   if doorType is "pod bay"
-  #     msg.reply "I'm afraid I can't let you do that."
-  #   else
-  #     msg.reply "Opening #{doorType} doors"
-  #
-  # robot.hear /I like pie/i, (msg) ->
-  #   msg.emote "makes a freshly baked pie"
+  robot.hear /badger/i, (msg) ->
+     msg.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
+  
+  robot.respond /open the (.*) doors/i, (msg) ->
+    doorType = msg.match[1]
+    if doorType is "pod bay"
+      msg.reply "I'm afraid I can't let you do that."
+    else
+      msg.reply "Opening #{doorType} doors"
+  
+  enterReplies = ['Hi', 'Target Acquired', 'Firing', 'Hello friend.', 'Gotcha', 'I see you']
+  leaveReplies = ['Are you still there?', 'Target lost', 'Searching']
+
+  robot.enter (msg) ->
+    msg.send msg.random enterReplies
+  robot.leave (msg) ->
+    msg.send msg.random leaveReplies
+robot.hear /I like pie/i, (msg) ->
+  msg.emote "makes a freshly baked pie"
   #
   # lulz = ['lol', 'rofl', 'lmao']
   #
@@ -32,13 +39,6 @@ module.exports = (robot) ->
   #   msg.send "#{msg.message.text}? That's a Paddlin'"
   #
   #
-  # enterReplies = ['Hi', 'Target Acquired', 'Firing', 'Hello friend.', 'Gotcha', 'I see you']
-  # leaveReplies = ['Are you still there?', 'Target lost', 'Searching']
-  #
-  # robot.enter (msg) ->
-  #   msg.send msg.random enterReplies
-  # robot.leave (msg) ->
-  #   msg.send msg.random leaveReplies
   #
   # answer = process.env.HUBOT_ANSWER_TO_THE_ULTIMATE_QUESTION_OF_LIFE_THE_UNIVERSE_AND_EVERYTHING
   #
