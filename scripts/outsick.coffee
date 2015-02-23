@@ -1,5 +1,5 @@
-# fs	= require 'fs'
-# fs.readFile './users.json', (err, data) -> fileText = data
+fs	= require 'fs'
+datum	= fs.readFile './usersfeb20.json', (err, data) -> fileText = data
 
 staff = [
 	'Alex Acevedo',
@@ -24,4 +24,4 @@ module.exports = (robot) ->
 		  msg.reply "#{outName}? No excuse? No surprise. I'll add them to the list."
 		else
 		  msg.reply "So #{outName} is out #{status}? That's nifty. I'll add them to the list."
-		#msg.reply fileText
+		msg.emote "is not smart enough to remember the list yet, so don't rely on me for this service. It's just for fun now."
