@@ -27,8 +27,8 @@ module.exports = (robot) ->
     msg.send msg.random enterReplies
   robot.leave (msg) ->
     msg.send msg.random leaveReplies
-robot.hear /I like pie/i, (msg) ->
-  msg.emote "makes a freshly baked pie"
+  robot.hear /I like pie/i, (msg) ->
+    msg.emote "makes a freshly baked pie"
   #
   # lulz = ['lol', 'rofl', 'lmao']
   #
