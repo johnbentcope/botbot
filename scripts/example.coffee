@@ -20,13 +20,7 @@ module.exports = (robot) ->
     else
       msg.reply "Opening #{doorType} doors"
   
-  enterReplies = ['Hi', 'Target Acquired', 'Firing', 'Hello friend.', 'Gotcha', 'I see you']
-  leaveReplies = ['Are you still there?', 'Target lost', 'Searching']
 
-  robot.enter (msg) ->
-    msg.send msg.random enterReplies
-  robot.leave (msg) ->
-    msg.send msg.random leaveReplies
   robot.hear /I like pie/i, (msg) ->
     msg.emote "makes a freshly baked pie"
   #
