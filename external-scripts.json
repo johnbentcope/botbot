@@ -11,5 +11,6 @@
   "hubot-youtube",
   "hubot-calculator",
   "flip",
+  "underscore",
   "moment"
 ]
