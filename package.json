@@ -20,7 +20,7 @@
     "hubot-slack": "^3.2.1",
     "hubot-youtube": "^0.1.2",
     "hubot-calculator": "0.4.0",
-    "hubot-ambush": "0.0.3"
+    "flip": "0.1.1"
   },
   "engines": {
     "node": "0.10.x"
