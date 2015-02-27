@@ -19,8 +19,7 @@
 moment = require 'moment'
 _ = require 'underscore'
 plugin = (robot)->
-  robot.brain.on 'loaded', =>
-    robot.brain.data.outList = []  unless _(robot.brain.data.outList).isArray()
+  robot.brain.data.outList = []  unless _(robot.brain.data.outList).isArray()
 
   robot.respond /whoisout/i, (msg)->
     msg.send (plugin.getAbsentees robot, msg.match[1])
@@ -62,6 +61,7 @@ plugin.parseDate = (fuzzyDateString)->
 
 plugin.save = (robot, date, msg)->
   userOutList = robot.brain.data.outList
+  console.log("TEEEEEEEEEEEEEEEST #{robot.brain.data.outList}")
   userVacation = _(userOutList).find (item)-> item.name is msg.user.name
 
   if userVacation is undefined
